@@ -348,6 +348,7 @@
     display: none;
   }
 
-  .completed {
+.completed {
       text-decoration: line-through; 
+      color: red; 
   }
