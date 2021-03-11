@@ -13,7 +13,6 @@ class TodoForm extends React.Component{
     todoSubmit = event => {
         event.preventDefault(); 
         this.props.addTodo(this.state.userTodo)
-
     }
     render(){
     return(
@@ -26,7 +25,7 @@ class TodoForm extends React.Component{
             value={this.state.userTodo}/>
 
             <button>Add Todo</button>
-            <button>Clear Completed</button>
+            <button onClick={this.props.clearCompleted}>Clear Completed</button>
 
         </form>
    </div>
