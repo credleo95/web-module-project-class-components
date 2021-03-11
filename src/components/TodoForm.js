@@ -1,6 +1,8 @@
 import React from "react";
 
 class TodoForm extends React.Component{
+
+    
     constructor(){
     super(); 
     this.state= {
@@ -21,11 +23,12 @@ class TodoForm extends React.Component{
         <form onSubmit = {this.todoSubmit}>
             <input type="text" 
             name="todoItem" 
-            placeholder="...todo"
+            placeholder="...your todo's"
             onChange={this.handleChange} 
             value={this.state.userTodo}/>
 
             <button>Add Todo</button>
+            &nbsp;&nbsp;
             <button onClick={this.props.clearCompleted}>Clear Completed</button>
 
         </form>

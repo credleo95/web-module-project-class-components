@@ -347,8 +347,32 @@
   [hidden] {
     display: none;
   }
-
+  html{
+      background-color: rgb(132, 187, 189, .5); 
+  }
+  h1,form{
+      text-align: center; 
+  }
+.parent-container{
+    width: 50%; 
+    margin: 0 auto; 
+    border: 2px solid black; 
+    border-radius: 30px; 
+    margin-top: 2rem; 
+}
 .completed {
       text-decoration: line-through; 
       color: red; 
+  }
+  .list-container{
+      width: 100%; 
+      cursor: pointer; 
+      font-size: 1.5rem; 
+      display: flex; 
+      flex-flow: column wrap; 
+      text-align: center; 
+  }
+  button:hover{
+      color: white; 
+      background-color: #CC9999;
   }
