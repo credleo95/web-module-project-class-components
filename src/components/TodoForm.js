@@ -3,27 +3,30 @@ import React from "react";
 class TodoForm extends React.Component{
     constructor(){
     super(); 
-    this.state={
-        userInput: ''
-    }
+    this.state= {
+         userInput: ''
+       }
     }
     handleChange = event => {
-        this.setState({userInput:event.target.value})
+        this.setState({userInput: event.target.value})
     };
     render(){
     return(
-
+    <div>
         <form>
             <input type="text" 
             name="todoItem" 
             placeholder="...todo"
             onChange={this.handleChange} 
             value={this.state.userInput}/>
-            
+
             <button>Add Todo</button>
             <button>Clear Completed</button>
 
         </form>
+   </div>
     )
 }
 }
+
+export default TodoForm;
