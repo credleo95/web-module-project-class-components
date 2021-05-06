@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList'; 
+import './components/Todo.css';
 
 const todos =[{
       task: 'Laundry',
@@ -24,7 +25,7 @@ class App extends React.Component {
     })
   }
 
-  toggleCompleted = todoId => {
+  toggleCompleted = (todoId) => {
     this.setState({
       todo: this.state.todo.map(todo => {
         if (todo.id === todoId){
@@ -50,7 +51,8 @@ class App extends React.Component {
           <h1>Here's what I need to do!</h1>
           <TodoForm addTodo= {this.addTodo}/>
         </div>
-        <TodoList clear={this.clearCompleted} todos={this.state.todo} toggleCompleted={this.state.toggleCompleted}/>
+        <TodoList clear={this.clearCompleted} todos={this.state.todo} toggleCompleted={this.toggleCompleted}/>
+       
       </div>
     );
   }

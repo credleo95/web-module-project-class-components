@@ -11,7 +11,7 @@ const {clear, todos, toggleCompleted } = props
             {todos.map(todo => (
     <Todo toggleCompleted={toggleCompleted} key={todo.id} todo={todo}/>
             ))}
-            <button onClick={() => clear()} className="clear-button">
+            <button onClick={clear} className="clear-button">
                 Clear Completed
             </button>
         </div>

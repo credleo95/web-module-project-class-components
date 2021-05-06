@@ -2,13 +2,15 @@ import React from 'react'; //
 
 
 const Todo = props => {
+
+    const {toggleCompleted, todo} = props
     const handleClick = event => {
         event.preventDefault(); 
-        props.toggleCompleted(props.todo.id); 
+        toggleCompleted(todo.id); 
     }
     return (
-        <div onClick={handleClick} className={`item${props.todo.purchased ? ' completed' : ''}`}>
-            <p>{props.todo.task}</p>
+        <div onClick={handleClick} className={`task${todo.completed ? ' completed' : ''}`}>
+            <p>{todo.task}</p>
         </div>
     )
 }
